@@ -146,7 +146,7 @@ var ScrollableTabView = React.createClass({
       currentPage = currentPage.nativeEvent.position;
     }
     this.setState({currentPage}, () => {
-      this.props.onChangeTab({ i: currentPage });
+      this.props.onChangeTab({ i: currentPage, ref: this._children()[currentPage] });
     });
   },
 
